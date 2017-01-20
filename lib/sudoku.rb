@@ -79,6 +79,10 @@ class Sudoku
     end
   end
 
+  def steal_solution(board)
+
+  end
+
   def try_to_solve!
     @cells.each do |cell|
       cell.solve! unless cell.solved?

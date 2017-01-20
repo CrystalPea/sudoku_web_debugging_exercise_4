@@ -3,7 +3,7 @@
 <h2>Difficulty Level: <%= difficulty_level(session[:set_sudoku]) %></h2>
 <div class="flashspace">
   <%= styled_flash %>
-</div>  
+</div>
 <form action="/" method="post">
   <div class="board">
     <table cellspacing="0">
@@ -24,9 +24,8 @@
       <button type="button"><a href="/hard">New Hard Game</a></button>
       <button type="button"><a href="/solution">Solution</a></button>
     </div>
+    <% if difficulty_level(session[:set_sudoku]) == "Hard" %>
+      <p> Life is too short for playing Sudoku
+    <% end %>
   </div>
 </form>
-
-
-
-
